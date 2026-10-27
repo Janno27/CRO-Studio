@@ -1,0 +1,12 @@
+{
+  "name": "@cro-studio/core",
+  "version": "0.1.0",
+  "description": "Dependency-free runtime for A/B test payloads: idempotent lifecycle, scoped CSS, single observer, configurable tracking.",
+  "type": "module",
+  "license": "MIT",
+  "main": "src/index.js",
+  "exports": { ".": "./src/index.js", "./*": "./src/*.js" },
+  "files": ["src"],
+  "scripts": { "test": "node --test test/*.test.js" },
+  "engines": { "node": ">=20" }
+}

@@ -1,0 +1,62 @@
+{
+  "$schema": "./node_modules/cro-studio/schema/cro-studio.config.schema.json",
+  "project": {
+    "name": "Demo Shop"
+  },
+  "namespace": "demo",
+  "experimentsDir": "experiments",
+  "outDir": "dist",
+  "ids": {
+    "pattern": "^[a-z0-9][a-z0-9-]*$",
+    "example": "checkout-trust-badges"
+  },
+  "markets": [
+    {
+      "id": "main",
+      "hosts": [
+        "demo.example.test"
+      ],
+      "locale": "en"
+    }
+  ],
+  "pageTypes": [
+    "home",
+    "category",
+    "product",
+    "cart",
+    "checkout",
+    "other"
+  ],
+  "platform": {
+    "target": "generic"
+  },
+  "tracking": {
+    "mode": "datalayer",
+    "dataLayer": "dataLayer",
+    "template": {
+      "event": "cro_experiment",
+      "experiment_ref": "{ref}",
+      "experiment_label": "{label}"
+    }
+  },
+  "brief": {
+    "source": "conversation",
+    "mcp": null
+  },
+  "design": {
+    "figma": {
+      "mcp": "figma"
+    },
+    "storybook": {
+      "enabled": false,
+      "url": null
+    }
+  },
+  "reviews": {
+    "design": false,
+    "engineer": false
+  },
+  "browser": {
+    "headless": true
+  }
+}

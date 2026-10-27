@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "CRO Studio config",
+  "type": "object",
+  "properties": {
+    "project": { "type": "object", "properties": { "name": { "type": "string" } } },
+    "namespace": { "type": "string", "pattern": "^[a-z][a-z0-9]*(-[a-z0-9]+)*$", "description": "Prefix for CSS classes (.<ns>-<id>__x), data attributes and the single global window.__<ns>." },
+    "experimentsDir": { "type": "string", "default": "experiments" },
+    "outDir": { "type": "string", "default": "dist" },
+    "capturesDir": { "type": "string", "default": "captures" },
+    "ids": { "type": "object", "properties": { "pattern": { "type": "string", "description": "Regex every experiment id must match." }, "example": { "type": "string" } } },
+    "markets": { "type": "array", "minItems": 1, "items": { "type": "object", "required": ["id", "hosts"], "properties": { "id": { "type": "string" }, "hosts": { "type": "array", "items": { "type": "string" } }, "locale": { "type": "string" } } } },
+    "pageTypes": { "type": "array", "items": { "type": "string" } },
+    "platform": { "type": "object", "properties": { "target": { "enum": ["generic"] } } },
+    "tracking": {
+      "type": "object",
+      "properties": {
+        "mode": { "enum": ["datalayer", "hook", "none"] },
+        "dataLayer": { "type": "string" },
+        "template": { "type": "object", "description": "Pushed as-is; string values may use {id} {ref} {label} {section}." },
+        "hook": { "type": "string", "description": "Global function path called with { id, ref, label, section }." }
+      }
+    },
+    "brief": { "type": "object", "properties": { "source": { "enum": ["conversation", "mcp"] }, "mcp": { "type": ["string", "null"] } } },
+    "design": { "type": "object", "properties": { "figma": { "type": ["object", "null"], "properties": { "mcp": { "type": "string" } } }, "storybook": { "type": "object", "properties": { "enabled": { "type": "boolean" }, "url": { "type": ["string", "null"] } } } } },
+    "reviews": { "type": "object", "properties": { "design": { "type": "boolean" }, "engineer": { "type": "boolean" } } },
+    "browser": { "type": "object", "properties": { "headless": { "type": "boolean" } } }
+  }
+}

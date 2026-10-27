@@ -1,0 +1,16 @@
+[
+  {
+    "name": "anchor",
+    "selector": "[data-test=\"add-to-cart\"]",
+    "purpose": "Element the variation is inserted next to. Replace with a selector you verified on the live page.",
+    "pageTypes": [
+      "product"
+    ],
+    "markets": [
+      "main"
+    ],
+    "status": "not-tested",
+    "role": "target",
+    "evidence": []
+  }
+]

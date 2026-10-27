@@ -1,0 +1,2 @@
+/* Scoped to this experiment: the namespaced attribute below is set on the button by variant.js when needed. */
+.demo-cta-label-test__unused { display: none; }
