@@ -88,7 +88,7 @@ docs/           documentation
 
 ## Requirements
 
-Node.js 20+. macOS, Linux and Windows (CI runs on all three). `preview` additionally needs `playwright-core` and a Chromium or Chrome.
+Node.js 20.19+. macOS, Linux and Windows (CI runs on all three). `preview` additionally needs `playwright-core` and a Chromium or Chrome.
 
 ## License
 
