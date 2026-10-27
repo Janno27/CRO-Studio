@@ -111,3 +111,15 @@ test('the shipped demo project builds cleanly', async () => {
   assert.equal(res, 0);
   rmSync(join(demo, 'dist'), { recursive: true, force: true });
 });
+
+test('init wizard reads piped stdin (CI / scripts) without losing answers', async () => {
+  const { Readable } = await import('node:stream');
+  const { createPrompter } = await import('../src/prompt.js');
+  const sink = { write() {} };
+  const p = createPrompter({ input: Readable.from(['Shop\nuk\n', 'y\nmaybe\n']), output: sink });
+  assert.equal(await p.text('a', 'x'), 'Shop');
+  assert.equal(await p.text('b', 'x'), 'uk');
+  assert.equal(await p.yesNo('c', false), true);
+  assert.equal(await p.choice('d', ['one', 'two'], 'two'), 'two'); // invalid -> default
+  assert.equal(await p.text('e', 'fallback'), 'fallback'); // input exhausted -> default
+});

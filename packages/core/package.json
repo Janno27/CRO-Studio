@@ -5,8 +5,37 @@
   "type": "module",
   "license": "MIT",
   "main": "src/index.js",
-  "exports": { ".": "./src/index.js", "./*": "./src/*.js" },
-  "files": ["src"],
-  "scripts": { "test": "node --test test/*.test.js" },
-  "engines": { "node": ">=20" }
+  "exports": {
+    ".": "./src/index.js",
+    "./*": "./src/*.js"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ab-testing",
+    "cro",
+    "experimentation",
+    "runtime",
+    "conversion-optimization"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Janno27/CRO-Studio.git",
+    "directory": "packages/core"
+  },
+  "homepage": "https://github.com/Janno27/CRO-Studio#readme",
+  "bugs": {
+    "url": "https://github.com/Janno27/CRO-Studio/issues"
+  }
 }

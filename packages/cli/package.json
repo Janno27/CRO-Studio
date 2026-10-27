@@ -4,10 +4,21 @@
   "description": "Build, validate and QA A/B test variations as safe, self-contained JS/CSS payloads for any testing platform.",
   "type": "module",
   "license": "MIT",
-  "bin": { "cro-studio": "bin/cro-studio.js" },
-  "files": ["bin", "src", "schema"],
-  "scripts": { "test": "node --test test/*.test.js" },
-  "engines": { "node": ">=20" },
+  "bin": {
+    "cro-studio": "bin/cro-studio.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "schema",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
   "dependencies": {
     "@cro-studio/core": "0.1.0",
     "acorn": "^8.19.0",
@@ -16,5 +27,27 @@
     "jsdom": "^30.1.2",
     "yaml": "^2.9.1"
   },
-  "optionalDependencies": { "playwright-core": "1.64.0" }
+  "optionalDependencies": {
+    "playwright-core": "1.64.0"
+  },
+  "keywords": [
+    "ab-testing",
+    "cro",
+    "experimentation",
+    "cli",
+    "playwright",
+    "conversion-optimization"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Janno27/CRO-Studio.git",
+    "directory": "packages/cli"
+  },
+  "homepage": "https://github.com/Janno27/CRO-Studio#readme",
+  "bugs": {
+    "url": "https://github.com/Janno27/CRO-Studio/issues"
+  }
 }
