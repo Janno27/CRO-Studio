@@ -1,4 +1,4 @@
-# LinkedIn post drafts (edit freely, replace <repo-url>)
+# LinkedIn post drafts (edit freely)
 
 ## English
 
@@ -15,9 +15,10 @@ What it does:
 
 What it will never claim: that a green build means it works on your platform. The human preview and the platform check stay yours.
 
-Node 20+, macOS/Linux/Windows. `npx cro-studio init` and you're set.
+Node 20.19+, macOS/Linux/Windows. `npx cro-studio init` and you're set.
 
-Repo: <repo-url>
+Repo: https://github.com/Janno27/CRO-Studio
+npm: https://www.npmjs.com/package/cro-studio
 Feedback, issues and PRs welcome, especially platform wrappers and brief adapters.
 
 #CRO #ExperimentationAB #ABTesting #OpenSource #Claude
@@ -36,4 +37,7 @@ J'ai construit un outil pour arrêter de livrer ça, et je le passe en open sour
 
 Ce qu'il ne prétend jamais : qu'un build vert garantit que ça marche sur ta plateforme. La preview humaine et la vérification plateforme restent à toi.
 
-Repo : <repo-url>
+Pour essayer : `npx cro-studio init` (Node 20.19+, macOS/Linux/Windows)
+
+Repo : https://github.com/Janno27/CRO-Studio
+npm : https://www.npmjs.com/package/cro-studio
